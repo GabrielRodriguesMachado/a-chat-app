@@ -27,5 +27,6 @@ const Home = () => {
       <button className="home__cta">SIGN IN</button>
     </form>
   )
-
 };
+
+export default Home;
