@@ -8,7 +8,7 @@ const socketIO = require('socket.io')(http, {
   }
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
 app.use(cors());
 
