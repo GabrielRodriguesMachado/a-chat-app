@@ -2,6 +2,9 @@
 
 Este projeto é um aplicativo de chat em tempo real desenvolvido com React no frontend e Node.js junto com a biblioteca Socket.IO no backend. Ele permite que várias pessoas se conectem simultaneamente e participem da mesma conversa.
 
+## 📷 Imagem do projeto
+![imagem do projeto](https://user-images.githubusercontent.com/23442340/226488941-73f6e7f8-6c3e-45dc-b6cc-e1c7765a91f5.png)
+
 ## 🚀 Iniciando
 
 Essas instruções vão te ajudar a baixar e executar uma cópia do projeto no seu computador local para desenvolvimento e teste.
@@ -34,7 +37,8 @@ npm install
 
 1. Inicie o servidor backend:
 
-```bash
+```bash![Uploading Captura de tela de 2023-03-20 20-40-55.png…]()
+
 cd server
 npm start
 ```
