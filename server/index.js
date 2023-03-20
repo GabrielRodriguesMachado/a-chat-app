@@ -23,8 +23,16 @@ socketIO.on('connection', (socket) => {
   });
 
   socket.on('message', (data) => {
-    socketIO.emit("messageResponse", data)
-  })
+    if (data.isPrivate) {
+      const recipient = users.find((user) => user.userName === data.recipient);
+      if (recipient) {
+        socketIO.to(recipient.socketID).emit("messageResponse", data);
+      }
+    } else {
+      socketIO.emit("messageResponse", data);
+    }
+  });
+  
 
   socket.on('typing', (data) => socket.broadcast.emit('typingResponse', data))
 
