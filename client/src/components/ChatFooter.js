@@ -28,14 +28,6 @@ const ChatFooter = ({ socket, users }) => {
   return (
     <div className="chat__footer">
     <form className="form" onSubmit={handleSendMessage}>
-      <input
-        type="text"
-        placeholder="Write message"
-        className="message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onKeyDown={handleTyping}
-      />
       <select
         value={recipient}
         onChange={(e) => setRecipient(e.target.value)}
@@ -48,6 +40,14 @@ const ChatFooter = ({ socket, users }) => {
           </option>
         ))}
       </select>
+      <input
+        type="text"
+        placeholder="Write message"
+        className="message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        onKeyDown={handleTyping}
+      />
       <button className="sendBtn">SEND</button>
     </form>
   </div>
