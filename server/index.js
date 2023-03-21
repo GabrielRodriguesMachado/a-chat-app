@@ -4,7 +4,7 @@ const http = require('http').Server(app);
 const cors = require('cors');
 const socketIO = require('socket.io')(http, {
   cors: {
-      origin: "http://localhost:3000"
+    origin: 'http://localhost:3000'
   }
 });
 
@@ -26,15 +26,15 @@ socketIO.on('connection', (socket) => {
     if (data.isPrivate) {
       const recipient = users.find((user) => user.userName === data.recipient);
       if (recipient) {
-        socketIO.to(recipient.socketID).emit("messageResponse", data);
+        socketIO.to(recipient.socketID).emit('messageResponse', data);
       }
     } else {
-      socketIO.emit("messageResponse", data);
+      socketIO.emit('messageResponse', data);
     }
   });
   
 
-  socket.on('typing', (data) => socket.broadcast.emit('typingResponse', data))
+  socket.on('typing', (data) => socket.broadcast.emit('typingResponse', data));
 
   socket.on('disconnect', () => {
     console.log('🔥: A user disconnected');
