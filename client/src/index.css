@@ -17,6 +17,14 @@
   background-color: #cedadd;
 }
 
+.message__recipient {
+  background-color: #f5ccc2;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
 .home__container > * {
   margin-bottom: 10px;
 }
