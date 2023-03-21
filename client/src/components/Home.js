@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -36,7 +37,7 @@ const Home = ({ socket }) => {
       />
       <button className="home__cta">SIGN IN</button>
     </form>
-  )
+  );
 };
 
 export default Home;

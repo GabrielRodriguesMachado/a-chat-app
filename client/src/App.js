@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import socketIO from 'socket.io-client';
 import ChatPage from './components/ChatPage';

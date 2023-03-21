@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react';
 import ChatBar from './ChatBar';
 import ChatBody from './ChatBody';
@@ -14,20 +15,20 @@ const ChatPage = ({ socket }) => {
   }, [socket, users]);
 
   useEffect(() => {
-    socket.on("messageResponse", (data) => setMessages([...messages, data]))
+    socket.on('messageResponse', (data) => setMessages([...messages, data]));
   }, [socket, messages]);
 
   useEffect(() => {
-    lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages])
+    lastMessageRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
   useEffect(() => {
-    socket.on("typingResponse", (data) => setTypingStatus(data));
+    socket.on('typingResponse', (data) => setTypingStatus(data));
   }, [socket]);
 
   return (
     <div className="chat">
-      <ChatBar socket={socket} users={users} />
+      <ChatBar users={users} />
       <div className="chat__main">
         <ChatBody
           messages={messages}
@@ -37,7 +38,7 @@ const ChatPage = ({ socket }) => {
         <ChatFooter socket={socket} users={users} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ChatPage
+export default ChatPage;

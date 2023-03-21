@@ -1,7 +1,8 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-const ChatBar = ({ socket, users }) => {
-  const currentUser = localStorage.getItem("userName");
+const ChatBar = ({ users }) => {
+  const currentUser = localStorage.getItem('userName');
 
   return (
     <div className="chat__sidebar">
@@ -19,4 +20,4 @@ const ChatBar = ({ socket, users }) => {
   );
 };
 
-export default ChatBar
+export default ChatBar;
